@@ -14,7 +14,7 @@ class AddAgeToUser extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            //
+            $table->smallInteger('age')->nullable() ;
         });
     }
 
@@ -26,7 +26,7 @@ class AddAgeToUser extends Migration
     public function down()
     {
         Schema::table('users', function (Blueprint $table) {
-            //
+            $table->dropColumn('age');
         });
     }
 }
