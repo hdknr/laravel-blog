@@ -1,6 +1,7 @@
 <div class="container">
     <div>
-        <a href="#" class="btn btn-primary">
+        <a href="{{ url('users/'.$user->id.'/edit') }}" class="btn btn-primary">
+
             {{ __('Edit') }}
         </a>
 
