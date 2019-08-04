@@ -40,6 +40,7 @@ class UserController extends Controller
         $user->name = $request->name;
         $user->email = $request->email;
         $user->password = $request->password;
+        $user->age = $request->age;
         $user->save();
         return redirect('users/'.$user->id);
     }
@@ -76,6 +77,7 @@ class UserController extends Controller
     public function update(Request $request, User $user)
     {
         $user->name = $request->name;
+        $user->age = $request->age;
         $user->save();
         return redirect('users/'.$user->id);
     }

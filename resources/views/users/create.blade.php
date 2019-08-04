@@ -9,6 +9,12 @@
             <input id="name" type="text" class="form-control" name="name" required autofocus>
         </div>
         <div class="form-group">
+            <label for="age">
+                {{ __('Age') }}
+            </label>
+            <input id="age" type="text" class="form-control" name="age">
+        </div>
+        <div class="form-group">
             <label for="email">
                 {{ __('E-Mail Address') }}
             </label>

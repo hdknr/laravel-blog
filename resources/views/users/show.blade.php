@@ -18,5 +18,7 @@
         <dd class="col-md-10">{{ $user->name }}</dd>
         <dt class="col-md-2">{{ __('E-Mail Address') }}</dt>
         <dd class="col-md-10">{{ $user->email }}</dd>
+        <dt class="col-md-2">{{ __('Age') }}</dt>
+        <dd class="col-md-10">{{ $user->age}}</dd>
     </dl>
 </div>
