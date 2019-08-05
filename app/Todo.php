@@ -45,6 +45,12 @@ class Todo extends Model
         return true;            // false -> not save
     }
 
+    function updateStartAt() {
+        if ($this->start_at == null){
+            return;
+        }
+    }
+
     function startsWith($str, $prefix) {
         return substr($str,  0, strlen($prefix)) === $prefix;
     }
@@ -54,5 +60,10 @@ class Todo extends Model
         return array_values(array_filter($columns, function($i){
             return $this->startsWith($i, 'every_') && $this->getAttribute($i) == true;
         }));
+    }
+
+    public function getIsPeriodicAttribute() {
+        $days_of_week = $this->days_of_week;
+        return $days_of_week && count($days_of_week) > 0;
     }
 }
